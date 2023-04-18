@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <i id='search-btn' class='fa-solid fa-magnifying-glass ml-auto absolute right-0 cursor-pointer'></i>
+
+    <script>
+        let SearchBtn = document.getElementById('search-btn');
+
+        SearchBtn.addEventListener('click', () => {
+            let SearchBox = document.createElement("<input type='search' />");
+        
+            SearchBtn.insertAdjacentELement('beforebegin', SearchBox) ;   
+            console.log(SearchBox)
+        })
+    </script>
+</body>
+</html>

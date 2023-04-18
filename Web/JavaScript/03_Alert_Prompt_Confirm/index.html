@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+    </head>
+    <body>
+        <h1>Hello Coder!</h1>
+
+        <button onclick="promptCall()">Prompt Box</button>
+        <button onclick="alertCall()">Alert</button>
+        <button onclick="confirmCall()">Confirm</button>
+
+        <script>
+            function promptCall() {
+                let age = prompt('Enter your age');
+
+                if(age != null)
+                    document.write(`Your age is ${age}`);
+                else
+                    document.write(`Prompt Box was empty`);  
+            }
+
+            function alertCall() {  
+                alert("Do you need my help?");
+            }
+
+            function confirmCall() {
+                let response = confirm('Do you want to see a meme');
+
+                if(response)
+                    document.write('What do we call a sefie with an orphan?      A Family Photo');
+                else    
+                    document.write('As you wish');
+            }
+        </script>
+    </body>
+</html>

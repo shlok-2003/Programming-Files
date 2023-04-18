@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    height: 6rem;
+    width: 100vw;
+    font-family: "Montserrat";
+    background-color: #F8CBA6;
+}
+
+.nav-links {
+    list-style: none;
+    
+    float: right;
+    margin-right: 1.125rem;
+}
+
+.links {
+    display: inline-block;
+    margin: 2.3rem 0.5rem 0 0.5rem;
+}
+
+.links a {
+    text-decoration: none;
+
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: capitalize; 
+
+    color: #D61355;
+    transition: 0.3s;
+}
+
+.links a.active, .links a:hover {
+    color: white;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 80px;
+
+    color: white;
+    padding: 0 5rem;
+} 

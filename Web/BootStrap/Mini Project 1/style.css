@@ -1,0 +1,39 @@
+body {
+    font-family: "Montserrat";
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #0A2647;
+}
+
+#navbar .navbar .nav-item {
+    margin: 0 0.7rem;
+}
+
+/* Face Section */
+#face-section {
+    margin: 5% 0;
+}
+
+.self-info-col-left {
+    background-color: #144272;
+    border-radius: 0 5% 5% 0;
+}
+
+.self-info-col-right {
+    background-color: #0A2647;
+    border-radius: 5% 0 0 5%;
+}
+
+.face-img {
+    width: 15rem;
+    float: right;
+    margin: 3% 0;
+    border-radius: 100%;
+}
+
+.self-info-col-right h2 {
+    color: #fff;
+    padding-top: 50px;
+}
