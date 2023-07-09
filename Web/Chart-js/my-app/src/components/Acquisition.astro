@@ -1,0 +1,89 @@
+---
+
+---
+
+<main>
+    <div class="relative ">
+        <canvas id="acquisition"></canvas>
+    </div>
+</main>
+
+<script>
+    import Chart from "chart.js/auto"
+    const ctx : any = document.getElementById("acquisition");
+
+    const data1 = [
+        { year: 2010, count: 10 },
+        { year: 2011, count: 20 },
+        { year: 2012, count: 15 },
+        { year: 2013, count: 25 },
+        { year: 2014, count: 22 },
+        { year: 2015, count: 30 },
+        { year: 2016, count: 28 },
+    ];
+
+    const data = {
+        labels: data1.map(item => item.year),
+        datasets: [
+            {
+                label: 'Acquisitions by year',
+                data: data1.map(item => item.count),
+                fill: true,
+                backgroundColor: 'red',
+                borderColor: 'black',
+                pointBackgroundColor: 'blue',
+            },
+        ],
+    }
+
+    let delayed;
+    const config : any = {
+        type: "line",
+        data: {
+            labels: data1.map(item => item.year),
+            datasets: [
+                {
+                    label: 'Acquisitions by year',
+                    data: data1.map(item => item.count),
+                    fill: true,
+                    backgroundColor: 'red',
+                    borderColor: 'black',
+                    pointBackgroundColor: 'blue',
+                },
+            ],
+        },
+        options: {
+            radius: 5,
+            hoverRadius: 6,
+            hitRadius: 10,
+            responsive: true,
+            scales: {
+                y: {
+                    ticks: {
+                        callback: function (value) {
+                            return value + 'S';
+                        }
+                    },
+                },
+            },
+            tension: 0.4,
+            animation: {
+                onComplete: () => {
+                    delayed = true;
+                },
+                delay: (context : any) => {
+                    let delay = 0;
+                    if(context.type === "data" && context.mode === "default" && !delayed) {
+                        delay = context.dataIndex * 300 + context.datasetIndex * 100;
+                    }
+
+                    return delay;
+                },
+            }
+        }
+    }
+
+    const myChart = new Chart(ctx, config);
+</script>
+
+<script type="text/javascript" src="http://www.chartjs.org/assets/Chart.js"></script>
