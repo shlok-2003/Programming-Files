@@ -1,0 +1,12 @@
+db.Mahindra.insertMany(
+    [
+        {
+            "name": "Car1",
+            "model": "model1"
+        },
+        {
+            "name": "Car2",
+            "model": "model2"
+        }
+    ]
+)

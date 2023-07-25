@@ -1,0 +1,9 @@
+The mapping schemas for the backend is
+
+index.js <-----> routes.js <-----> controller.js <-----> model.js
+
+the folder constains
+
+model contains the schemas for the database
+controller contains the actual logic for the api, or you can say it contains the functions for the api
+routes contains the mapping of the api to the controller
