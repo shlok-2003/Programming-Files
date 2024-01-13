@@ -1,0 +1,15 @@
+Material UI is an open-source React component library that implements Google's Material Design.
+
+It includes a comprehensive collection of prebuilt components that are ready for use in production right out of the box.
+
+Components:
+1) Typography: The Typography component is used to present your design and content as clearly and efficiently as possible.
+    props: 
+        align: 'inherit' | 'left' | 'center' | 'right' | 'justify'
+        color: 'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+        display: 'initial' | 'block' | 'inline'
+        gutterBottom: bool
+        noWrap: bool
+        paragraph: bool
+        variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'caption' | 'button' | 'overline' | 'srOnly' | 'inherit'
+        variantMapping: object

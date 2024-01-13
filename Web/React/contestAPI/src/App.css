@@ -1,0 +1,29 @@
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+  font-family: 'Inter', 'monospace';
+  font-weight: bolder;
+}
+
+.button {
+  appearance: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  gap: 10px;
+}
+
+.btn > * {
+  font-size: larger;
+}
