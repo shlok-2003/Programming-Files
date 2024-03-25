@@ -1,0 +1,60 @@
+We will be installing Redis through Docker container.
+
+Redis is a in-memory store and it is also a server. Hence we create its instance through a container on the default port 6379.
+Redis runs on the command line interface (cli), so we will be using the command line to interact with the Redis server. But for visualising
+the data, we will be using the GUI. We will we using the image below
+
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+
+-d = detach mode, meaning we can run it in background
+-p = port, we are exposing the port 6379 for the Redis server and 8001 for the GUI
+
+The above command will create a container with the name redis-stack and will be running on the default port 6379. 
+We will also be exposing the port 8001 for the GUI.
+
+visit localhost 8000 for gui, and accept the terms and conditions.
+
+To connect the redis server, we will be using the command line interface (cli) and for that we will be using the following command
+
+docker ps
+
+This will give us the container id, which we will be using to connect to the Redis server.
+
+docker exec -it ${container_id} bash
+redis-cli
+
+now test the connection by -> ping
+if it returns PONG, then the connection is successful.
+
+SET
+    set ${key_name} ${value_of_key}
+
+GET 
+    get ${key_name}
+
+The best naming convention for the key is to use the following format
+    <entity>:<id>   <value>
+
+with the help of this delimiter, now we can easily group them in a folder. 
+
+Now along with this, we can use the attribute nx, which means if the key is not present, then only set the value. 
+    set ${key_name} ${value_of_key} nx
+
+we can get the value by using the following command
+    get ${key_name}
+        OR
+    mget ${key_name1} ${key_name2} ${key_name3}             // for multiple keys
+
+Now, we can do increment and decrement operations on the keys. 
+    incr ${key_name}
+    decr ${key_name}
+
+We can also do multiple increment and decrement operations on the keys.
+    incrby ${key_name} ${value}
+    decrby ${key_name} ${value}
+
+We can also set the expiry time for the keys.
+    expire ${key_name} ${time_in_seconds}
+
+    example
+        expire ${key_name} 10

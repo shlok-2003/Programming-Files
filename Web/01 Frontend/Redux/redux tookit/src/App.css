@@ -1,0 +1,86 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.buttons > button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart {
+    background-color: green;
+    text-align: center;
+    width: 99%;
+    margin: 10px;
+    align-self: start;
+}
+
+.cart > h1 {
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: middle;
+}
+
+.cart > h1:last-child {
+    color: orange;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+
+    background-color: azure;
+}
+
+.card > * {
+    font-size: 1.2rem;
+}
+
+.card > button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bolder;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    background-color: orchid;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
