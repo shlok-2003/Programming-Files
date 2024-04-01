@@ -1,0 +1,91 @@
+# List
+student: !!seq
+  - marks
+  - name
+  - roll_number
+
+--- 
+# You can store like this also
+student: !!seq [marks, name, roll_number]
+
+--- 
+# Some of the keys of the seq will be empty
+student: !!seq
+  - marks
+  - 
+  - roll_number
+  - null
+
+--- 
+# Nested sequence
+student: !!seq
+  - !!seq
+    - marks: 20
+    - grade: 10
+  - !!seq
+    - name
+    - roll_number
+
+---
+# Mapping
+student: !!map
+  marks: 20
+  grade: 10
+  name: Shlok Prajapati
+  roll_number: 123
+  subjects: !!map
+    maths: 20
+    science: 40
+    english: 50
+
+---
+# Pair
+pair example: !!pairs
+  - job: student
+  - job: teacher
+  - job: engineer
+#? This will be an array of hash-tables
+
+---
+# Set
+student: !!set
+  ? marks
+  ? name
+  ? roll_number
+
+---
+# Unordered Map
+people: !!omap
+  - Shlok:
+      age: 20
+      job: student
+  - John:
+      age: 30
+      job: teacher
+
+---
+# Anchors
+likings: &likes
+  fav_food: pizza
+  fav_color: blue
+
+people: !!omap
+  - person1:
+      name: Shlok Prajapati
+      <<: *likes
+  - person2:
+      name: John Doe
+      <<: *likes
+      fav_food: burger      #? This will override the value of fav_food
+
+---
+# This will look like this
+people:
+  - person1:
+      name: Shlok Prajapati
+      fav_food: pizza
+      fav_color: blue
+  - person2:
+      name: John Doe
+      fav_food: burger
+      fav_color: blue

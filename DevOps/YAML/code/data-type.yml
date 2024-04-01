@@ -1,0 +1,55 @@
+---
+# Variable
+myself: Shlok Prajapati
+# It can be used as a string, integer, float, boolean, null, array, object, etc.
+
+---
+# To write a multiple line
+myself: |
+  Hey there
+  I am Shlok Prajapati
+
+---
+# To write single line into multiple line
+myself: >
+  Hey there
+  I am Shlok Prajapati
+
+---
+# Boolean
+is_student: n       #! n, N, false, False, FALSE, No
+is_teacher: y       #! y, Y, true, True, TRUE, Yes
+
+---
+# To specify data type
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+octalNum: !!int 0o31
+hexadecimalNum: !!int 0x1F
+binaryNum: 0b101
+expoValue: 1.5e+3
+commaValue: +540_000
+
+---
+# Floating point number
+pi: !!float 3.14159
+infinity: !!float .inf
+not a number: !!float .nan
+
+---
+# String
+name: !!str Shlok Prajapati
+
+---
+# Null
+surname: !!null null       #! null, Null, NULL, ~
+~: this is a null key
+#? null: this is a null value    -- this also works
+
+---
+# Date and Time
+#! If no timezone is given, it assumes UTC
+date: !!timestamp 2021-07-01T12:00:00Z
+india time: !!timestamp 2023-07-01T12:00:00 +05:30
+no time zone: !!timestamp 2023-07-01T12:00:00

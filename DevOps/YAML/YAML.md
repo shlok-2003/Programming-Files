@@ -57,7 +57,7 @@ The reverse process of serialization is called deserialization. It involves conv
 
 ### Example
 
-```yaml
+```yml
 # YAML Example
 name: John Doe
 age: 30
